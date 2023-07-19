@@ -3,7 +3,6 @@
 ## functions
 library(irr) # icc
 library(OpenMx)
-library(lavaan)
 # Chisq test
 twin.chisqTest <- function(dat,family_var,target_var,zygo_var,
                            Monochorionic_value=1,
@@ -29,7 +28,7 @@ twin.ICCTest <- function(dat,family_var,target_var,zygo_var,
   t2 <- aggregate(dat[w2,c(target_var)],list(dat[w2,family_var]),c)
   r1 <- icc(t1$x); v1 <- sprintf('%.2f(%.2f,%.2f)',r1$value,r1$lbound,r1$ubound)
   r2 <- icc(t2$x); v2 <- sprintf('%.2f(%.2f,%.2f)',r2$value,r2$lbound,r2$ubound)
-  # Fisher's z-transformation：将ICC值通过Fisher's z-transformation转换成正态分布的变量，然后用t检验或方差分析（ANOVA）来比较两组ICC值之间的差异。
+  # Fisher's z-transformation：将ICC值通过Fisher's z-transformation转换成正态分布的变量，然后用t检验比较两组ICC值之间的差异。
   icc1_z <- atanh(r1$value) # Fisher's z-transformation
   icc2_z <- atanh(r2$value) # Fisher's z-transformation
   # 计算ICC值之间的差异
@@ -52,8 +51,6 @@ twin.ICCTest <- function(dat,family_var,target_var,zygo_var,
 ##
 ## 结构方程模型
 # functions to get para for each model: ACE/ADE
-# 使用函数mxExpectationNormal()来计算潜变量的方差的期望值
-# expectation <- mxExpectationNormal(covariance = fit$output$cov, means = fit$output$means, dimnames = names(fit$output$means))
 get_sta <- function(modelx,model=c('ACE')){
   sumACE <- summary(modelx)
   if(model=='ACE') all_var <- c('a','c','e')
