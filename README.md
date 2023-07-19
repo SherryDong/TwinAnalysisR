@@ -12,7 +12,7 @@ check script in twin_analysis.R, use demo data to check usage
 
 ##ICC:
 
-![image](https://github.com/SherryDong/TwinAnalysisR/assets/6425734/2e8f74b9-c647-48f9-8eb8-d55084159dcc)
+![image](https://github.com/SherryDong/TwinAnalysisR/assets/6425734/015df010-2439-486a-a0cf-e611cf5aac63)
 
 ##ACE:
 
