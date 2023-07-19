@@ -8,7 +8,7 @@ check script in twin_analysis.R, use demo data to check usage
 
 ##Chisq-Test:
 
-![image](https://github.com/SherryDong/TwinAnalysisR/assets/6425734/25c02764-802c-4c99-8196-914d01f94696)
+![image](https://github.com/SherryDong/TwinAnalysisR/assets/6425734/9964b483-cf24-49b3-996c-afb4b341b43f)
 
 ##ICC:
 
