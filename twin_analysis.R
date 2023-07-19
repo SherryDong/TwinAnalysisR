@@ -2,7 +2,7 @@ source('twin_analysis_function.R')
 ###############################################################
 ## pipelines
 # load demo data
-dat <- read.delim('TwinAnalysis/data.txt')
+dat <- read.delim('data.txt')
 family_var <- 'FAMID';
 target_var <- 'BPD';
 zygo_var <- 'zygo'; # 1-Monochorionic，0-Dichorionic
