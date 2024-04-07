@@ -37,7 +37,7 @@ twin.ICCTest <- function(dat,family_var,target_var,zygo_var,
   diff_z_bootstrap <- numeric(n_bootstrap)
   for (i in 1:n_bootstrap) {
     twin1_boot <- t1$x[sample(1:nrow(t1$x), replace = TRUE),]
-    twin2_boot <- t2$x[sample(1:nrow(t1$x), replace = TRUE),]
+    twin2_boot <- t2$x[sample(1:nrow(t2$x), replace = TRUE),]
     icc1_boot <- icc(twin1_boot)$value
     icc2_boot <- icc(twin2_boot)$value
     diff_z_bootstrap[i] <- atanh(icc1_boot) - atanh(icc2_boot)
